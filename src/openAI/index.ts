@@ -16,7 +16,7 @@ export class OpenAIService extends Base {
   createChatCompletion(newChat: ChatRequest): Promise<ChatResponse> {
     return this.invoke(`${chatResource}`, {
       method: "POST",
-      data: JSON.stringify(newChat),
+      body: JSON.stringify(newChat),
     });
   }
 }
