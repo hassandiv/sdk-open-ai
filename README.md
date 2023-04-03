@@ -39,8 +39,12 @@
 ## Installation and Usage
 
 - To install hassan-SDK, run the following command:
-  `npm install hassan-sdk`
-  `yarn add hassan-sdk`
+
+```
+npm install hassan-sdk
+OR
+yarn add hassan-sdk
+```
 
 ## Setup
 
