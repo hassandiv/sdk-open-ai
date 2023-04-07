@@ -2,19 +2,19 @@
 
 //4
 type Config = {
-  apikey: string;
+  apiKey: string;
   baseUrl?: string;
 };
 
 //1
 export abstract class Base {
   //2 define private variables below
-  private apikey: string;
+  private apiKey: string;
   private baseUrl: string;
 
   //3
   constructor(config: Config) {
-    this.apikey = config.apikey;
+    this.apiKey = config.apiKey;
     this.baseUrl = config.baseUrl || "https://openai80.p.rapidapi.com/";
   }
 
@@ -25,7 +25,7 @@ export abstract class Base {
 
     const headers = {
       "Content-Type": "application/json",
-      "X-RapidAPI-Key": this.apikey,
+      "X-RapidAPI-Key": this.apiKey,
       "X-RapidAPI-Host": "openai80.p.rapidapi.com",
     };
 

@@ -1,5 +1,5 @@
 type Nullable<T> = T | null;
-declare type Permission = {
+declare interface Permission {
     id: string;
     object: string;
     created: number;
@@ -12,14 +12,14 @@ declare type Permission = {
     organization: string;
     group: Nullable<number>;
     is_blocking: boolean;
-};
-export declare type Model = {
+}
+export declare interface Model {
     id: string;
     object: string;
     owned_by: string;
     permission: Permission[];
-};
-export declare type ChatResponse = {
+}
+export declare interface ChatResponse {
     id: string;
     object: string;
     created: number;
@@ -27,12 +27,12 @@ export declare type ChatResponse = {
     permission: Permission[];
     root: string;
     parent: Nullable<number>;
-};
-export declare type ChatRequest = {
+}
+export declare interface ChatRequest {
     model: string;
     messages: {
         role: string;
         content: string;
     }[];
-};
+}
 export {};

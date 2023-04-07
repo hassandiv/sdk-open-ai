@@ -1,10 +1,10 @@
-import { Base } from "src/base";
+import { Base } from "../base";
 import { Model, ChatRequest, ChatResponse } from "./types";
 
 const modelsResource = "models";
 const chatResource = "chat/completions";
 
-export class OpenAIService extends Base {
+export class ChatGPT3 extends Base {
   getModels(): Promise<Model[]> {
     return this.invoke(`${modelsResource}`);
   }
